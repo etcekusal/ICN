@@ -20,9 +20,10 @@ else:
         ratio = df.iloc[:,6]
         memory_output = df.iloc[:,15]
         cloud_inference_time_orig = df.iloc[:,7]
-st.subheader("==========================================================")
+st.subheader("==================================================")
 st.subheader("\n")
-
+st.text("Use the specified Zeroth Layer Input Memory for your chosed Network : \n VGG16 \t\t 12288 Bytes\n ResNet\t\t 14700 Bytes\n MobileNetv1\t 150528 Bytes\n\nOtherwise use your own network's Zeroth Layer Input memory ")
+st.subheader("\n")
 def calculate_total_inference_time(ratio,F,memory_output,B,input_memory,cloud_inference_time):
     rasp_pi_inference_time = []
     for i in range(len(ratio)):
